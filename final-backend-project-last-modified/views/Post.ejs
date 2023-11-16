@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Blog - Update</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-primary"> 
+  <div class="container bg-warning mt-5 mb-3 border text-center">
+    <%- include('navbar', { currentPage: 'Post' }) %>
+    <div class="d-flex justify-content-end p-3">
+      <h1>The Comment has been Added successfully</h1>
+      <a href="/" class="m-2 text-decoration-none">Go Back</a>
+    </div>
+  </div>
+<script>
+
+
+
+// JavaScript
+function deletePost(postId) {
+  axios.delete('/deletePost/' + postId)
+    .then(response => {
+      // Handle response data or UI update after successful delete
+      console.log(response.data);
+    })
+    .catch(error => {
+      // Handle error response or display error message
+      console.error(error);
+    });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Blog - Register</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <div class="container mt-4 mb-3 bg-warning text-center">
+    <%- include('navbar', { currentPage: 'register' }) %>
+    <h1>Register</h1>
+    <!-- Registration form -->
+    <form action="/register" method="post" enctype="multipart/form-data">
+      <!-- Input fields -->
+      <div class="mb-3">
+        <input type="text" name="username" class="form-control" placeholder="Username" required>
+      </div>
+      <div class="mb-3">
+        <input type="email" name="email" class="form-control" placeholder="Email" required>
+      </div>
+      <div class="mb-3">
+        <input type="password" name="password" class="form-control" placeholder="Password" required>
+      </div>
+      <div class="mb-3">
+        <input type="file" name="avatar" class="form-control" accept="image/*">
+      </div>
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary mb-3">Register</button>
+    </form>
+  </div>
+  
+</body>
+</html>

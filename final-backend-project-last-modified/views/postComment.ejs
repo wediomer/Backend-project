@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comments</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container bg-warning mt-5 mb-3 border text-center">
+    <%- include('navbar', { currentPage: 'postComment' }) %>
+   
+   <h1>Your comment has been added successfully</h1>
+  <h1><a href="javascript:history.go(-1)" class="m-2 text-decoration-none">OK</a></h1> 
+  </div>
+  <!-- <a href="javascript:history.go(-1)" class="m-2 text-decoration-none">Go Back</a> -->
+  <!-- Include Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
