@@ -20,20 +20,16 @@
 </head>
 <body class="bg-primary">
   <div class="container bg-warning mt-5 mb-3 border text-center">
-    <%- include('navbar', { currentPage: 'homepage' }) %>
+   
     <div>
       <div>
-        <% if (userLoggedIn) { %>
-          <a href="/logout" class="d-flex justify-content-end text-decoration-none">Logout</a>
-        <% } else { %>
-          <a href="/login" class="text-decoration-none bg-success me-3 p-2 text-info">Login</a>
-        <% } %>
-        <h1 class="mb-3">Welcome to My Blog</h1>
+         --
     
         <% if (posts.length === 0) { %>
           <!-- Render the create new post form if there are no posts -->
           <%- include('createBlog') %> <!-- Include the create post form EJS file -->
         <% } else { %>
+          <%- include('navbar', { currentPage: 'homepage' }) %>
           <% posts.forEach(post => { %>
             <div class="card mb-3">
               <div class="card-body">

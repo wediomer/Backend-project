@@ -382,6 +382,7 @@ app.post('/commentPost/:id', requireLogin, public.single('avatar'), async (req, 
         const post = await Post.findById(postId);
     
         if (!post || post.author.toString() !== req.session.loggedInUser) {
+          console.log('the error is from this line of code')
           res.render('Auth');
           return;
         }
